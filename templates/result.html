@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
+</head>
+<body>
+<div class="container">
+    <h1>Weather in {{ city }}</h1>
+    <p> Temperature: {{ weather.temperature }} °C</p>
+    <p> Humidity: {{ weather.humidity }} %</p>
+    <p> Wind Speed: {{ weather.wind_speed }} m/s</p>
+    <p> Condition: {{ weather.condition }}</p>
+    <hr>
+    <h2> Prediction:</h2>
+    <p>{{ prediction }}</p>
+    <a href="/">🔙 Check another city</a>
+</div>
+<!-- Contact section -->
+<footer>
+    {% include 'contact.html' %}
+</footer>
+
+</body>
+</html>
